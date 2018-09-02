@@ -40,16 +40,21 @@ def message():
       "message_button": {
         "label": "후기남기러 가기",
         "url": "http://charme.co.kr"
+      }
     }
   elif u"끝" in content:
     data_to_user= = {
-      'type': 'buttons',
-      'buttons': ["견적문의", "후기남기기", "별점주기"]
+      "keyboard": {
+        'type': 'buttons',
+        'buttons': ["견적문의", "후기남기기", "별점주기"]
+      }
     }
   elif u"*" in content:
     data_to_user= = {
-      'type': 'buttons',
-      'buttons': ["견적문의", "후기남기기", "별점주기"]
+      "keyboard": {
+        'type': 'buttons',
+        'buttons': ["견적문의", "후기남기기", "별점주기"]
+      }
     }
   else: # 별점주기
     data_to_user = {
