@@ -37,9 +37,11 @@ def message():
     }
   elif content == u"후기남기기":
     data_to_user = {
-      "message_button": {
-        "label": "후기를 남겨주시면 저희에게 큰 힘이 됩니다! 후기남기러 가기",
-        "url": "http://charme.co.kr"
+      "message": {
+        "message_button": {
+          "label": "후기를 남겨주시면 저희에게 큰 힘이 됩니다! 후기남기러 가기",
+          "url": "http://charme.co.kr"
+        }
       }
     }
   elif u"끝" in content:
