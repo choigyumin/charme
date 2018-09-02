@@ -11,7 +11,11 @@ def keyboard():
   # and button... 
   server_to_user_data = {
     'type': 'buttons',
-    'buttons': ["견적문의", "후기남기기", "별점주기"]
+    'buttons': [
+      "견적문의", 
+      "후기남기기", 
+      "별점주기"
+      ]
     }
   return jsonify(server_to_user_data)
 
@@ -46,14 +50,22 @@ def message():
     data_to_user= = {
       "keyboard": {
         'type': 'buttons',
-        'buttons': ["견적문의", "후기남기기", "별점주기"]
+        'buttons': [
+        "견적문의", 
+        "후기남기기", 
+        "별점주기"
+        ]
       }
     }
   elif u"*" in content:
     data_to_user= = {
       "keyboard": {
         'type': 'buttons',
-        'buttons': ["견적문의", "후기남기기", "별점주기"]
+        'buttons': [
+        "견적문의", 
+        "후기남기기", 
+        "별점주기"
+        ]
       }
     }
   else: # 별점주기
