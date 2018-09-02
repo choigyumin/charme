@@ -25,21 +25,42 @@ def message():
   if content == u"견적문의":
     data_to_user = {
       "message": {
-        "buttons": ["예식 날짜, 시간", \
-                    "예식 장소"]
+        "text": "예식 날짜, 시간과 장소를 남겨주시면 빠른 시간 내에 견적을 알려드리도록
+        하겠습니다. 감사합니다. \"끝\" 이라고 입력하시면 처음 메뉴로 돌아갑니다."
+      },
+      "keyboard": {
+        "type": "text"
       }
     }
   elif content == u"후기남기기":
     data_to_user = {
       "message": {
-        "text": "후기를 남겨주시면 \
-        저희에게 큰 도움이 됩니다."
-      }
+        "text": "후기를 남겨주시면 저희에게 큰 도움이 됩니다."
+      },
+      "message_button": {
+        "label": "후기남기러 가기",
+        "url": "http://charme.co.kr"
+    }
+  elif u"끝" in content:
+    data_to_user= = {
+      'type': 'buttons',
+      'buttons': ["견적문의", "후기남기기", "별점주기"]
+    }
+  elif u"*" in content:
+    data_to_user= = {
+      'type': 'buttons',
+      'buttons': ["견적문의", "후기남기기", "별점주기"]
     }
   else: # 별점주기
     data_to_user = {
-      "message": {
-        "buttons": ["매우만족", "만족", "보통", "실망"]
+      "keyboard": {
+        "type": "buttons",
+        "buttons": [
+          "* 매우만족",
+          "* 만족", 
+          "* 보통", 
+          "* 실망"
+        ]
       }
     }
 
