@@ -13,11 +13,10 @@ def keyboard():
 @app.route('/message', methods=['POST'])
 def message():
 
-  content = request.json['content']
-  response = content
+  #content = request.json['content']
+  #response = content
 
-  return jsonify({\
-                  'type': 'button',\
+  return jsonify({'type': 'button',\
                   'buttons': ["견적문의", "후기남기기", "별점주기"]
                   })
 
