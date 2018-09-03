@@ -47,31 +47,37 @@ def message():
     # 작동 테스트 완료
   elif u"끝" in content:
     data_to_user = {
-      "keyboard": {
+      'keyboard': {
         'type': 'buttons',
         'buttons': [
         "견적문의", 
         "후기남기기", 
         "별점주기"
         ]
+      },
+      'message': {
+        'text': "처음 메뉴로 돌아갑니다."
       }
     }
   elif u"*" in content:
     data_to_user = {
-      "keyboard": {
+      'keyboard': {
         'type': 'buttons',
         'buttons': [
         "견적문의", 
         "후기남기기", 
         "별점주기"
         ]
+      },
+      'message': {
+        'text': "처음 메뉴로 돌아갑니다."
       }
     }
   elif content== u"별점주기": # 별점주기
     data_to_user = {
       "keyboard": {
-        "type": "buttons",
-        "buttons": [
+        'type': 'buttons',
+        'buttons': [
           "* 매우만족",
           "* 만족", 
           "* 보통", 
