@@ -29,10 +29,15 @@ def message():
   if content == u"견적문의":
     data_to_user = {
       "message": {
-        "text": "예식 날짜, 시간과 장소를 남겨주시면 빠른 시간 내에 견적을 알려드리도록 하겠습니다. 감사합니다. \"끝\" 이라고 입력하시면 처음 메뉴로 돌아갑니다."
+        "text": "예식 날짜, 시간과 장소를 남겨주시면 빠른 시간 내에 견적을 알려드리도록 하겠습니다. 감사합니다. 끝이라고 입력하시면 처음 메뉴로 돌아갑니다."
       },
       "keyboard": {
-        "type": "text"
+        'type': 'buttons',
+        'buttons': [
+        "견적문의", 
+        "후기남기기", 
+        "별점주기"
+        ]
       }
     }
   elif content == u"후기남기기":
@@ -44,6 +49,7 @@ def message():
         }
       }
     }
+    # 작동 테스트 완료
   elif u"끝" in content:
     data_to_user = {
       "keyboard": {
