@@ -59,7 +59,7 @@ def message():
         'text': "처음 메뉴로 돌아갑니다."
       }
     }
-  elif u"*" in content:
+  elif u"****" in content: # 매우만족
     data_to_user = {
       'keyboard': {
         'type': 'buttons',
@@ -70,7 +70,21 @@ def message():
         ]
       },
       'message': {
-        'text': "처음 메뉴로 돌아갑니다."
+        'text': "좋은 평가 감사드립니다. 더 좋은 음악으로 보답하겠습니다."
+      }
+    }
+  elif u"*" in content: # 보통,실망
+    data_to_user = {
+      'keyboard': {
+        'type': 'buttons',
+        'buttons': [
+        "견적문의", 
+        "후기남기기", 
+        "별점주기"
+        ]
+      },
+      'message': { 
+        'text': "미흡한 점이 있었다면 진심으로 사과드립니다. 더 나은 샤르메가 되도록 노력하겠습니다. "
       }
     }
   elif content== u"별점주기": # 별점주기
@@ -78,10 +92,10 @@ def message():
       "keyboard": {
         'type': 'buttons',
         'buttons': [
-          "* 매우만족",
-          "* 만족", 
-          "* 보통", 
-          "* 실망"
+          "***** 매우만족",
+          "****  만족", 
+          "***   보통", 
+          "*     실망"
         ]
       },
       'message': {
